@@ -1,5 +1,5 @@
 import _winreg as wreg
-
+import os
 
 def set_proxy(proxy):
 	
@@ -140,6 +140,7 @@ if __name__ == "__main__":
 			print_all()
 			i = raw_input("Enter a Number to set proxy ===> ")
 			set_this(int(i))
+			os.system('control inetcpl.cpl,,4')
 
 
 		if inp=="2":
